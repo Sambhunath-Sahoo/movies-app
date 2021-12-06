@@ -1,10 +1,12 @@
 import './App.css';
+import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
-    <div>
-      <h1>Let's make Movie App 🚀</h1>
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 }
 
