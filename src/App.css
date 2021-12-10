@@ -65,3 +65,29 @@
   overflow: hidden;
   margin-right: 5vw;
 }
+
+.movies-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.movies-card{
+  width: 20vw;
+  margin: 1rem;
+  color: white;
+  position: relative;
+}
+
+.movies-title{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+}
+
+.movies-button{
+  position: absolute;
+  bottom: 2rem;
+}
