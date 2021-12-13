@@ -1,16 +1,25 @@
-import React from "react";
+import Navbar from "../src/components/Navbar";
+import Banner from "../src/components/Banner";
+import Movies from "../src/components/Movies";
+import Favourite from "../src/components/Favourite";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import Movies from "./components/Movies";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Banner />
-      <Movies />
-    </div>
+      <Switch>
+        <Route path="/" exact render={(props) => (
+          <>
+            <Banner {...props} />
+            <Movies {...props} />
+          </>
+        )}
+        />
+        <Route path="/favourites" component={Favourite} />
+      </Switch>
+    </Router>
   );
 }
 

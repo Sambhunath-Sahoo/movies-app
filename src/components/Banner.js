@@ -4,9 +4,10 @@ import React, { Component } from "react";
 export default class Banner extends Component {
     render() {
         let movie = movies.results[0];
+
         return (
-            <div>
-                {movie === "" ? (
+            <>
+                {movie == "" ? (
                     <div className="spinner-border text-primary" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </div>
@@ -17,12 +18,11 @@ export default class Banner extends Component {
                             alt={movie.title}
                             className="card-img-top banner-img"
                         />
-                      
                         <h1 className="card-title banner-title">{movie.original_title}</h1>
-                        <p className="card-text banner-text">{movie.overview}</p>
+                        <p class="card-text banner-text">{movie.overview}</p>
                     </div>
                 )}
-            </div>
+            </>
         );
     }
 }
